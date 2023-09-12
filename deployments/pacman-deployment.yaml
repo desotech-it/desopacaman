@@ -5,7 +5,7 @@ metadata:
     name: pacman
   name: pacman
   annotations:
-    source: "https://github.com/saintdle/pacman-tanzu"
+    source: "https://github.com/desotech-it/desopacman"
 spec:
   replicas: 1
   selector:
