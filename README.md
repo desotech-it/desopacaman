@@ -1,4 +1,4 @@
-# Desopacamn - CodeMotion 2023 @Milano
+# Desopacman - CodeMotion 2023 @Milano
 
 Pac-Man the classic arcade game - deployment files for VMware Tanzu Kubernetes and all other Kubernetes distributions.
 
