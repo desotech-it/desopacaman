@@ -17,7 +17,7 @@ spec:
         name: pacman
     spec:
       containers:
-      - image: quay.io/itsgaet/pacman-nodejs-app:latest
+      - image: r.deso.tech/pacman/pacman-nodejs-app
         name: pacman
         ports:
         - containerPort: 8080
@@ -32,6 +32,18 @@ spec:
             path: /
             port: 8080
         env:
+        - name: AWS_REGION
+          value: us-east-1
+        - name: AWS_ACCESS_KEY_ID
+          valueFrom:
+            secretKeyRef:
+              key: aws-access-key-id
+              name: aws-users-secret
+        - name: AWS_SECRET_ACCESS_KEY
+          valueFrom:
+            secretKeyRef:
+              key: aws-secret-access-key
+              name: aws-users-secret
         - name: MONGO_SERVICE_HOST
           value: mongo
         - name: MONGO_AUTH_USER
