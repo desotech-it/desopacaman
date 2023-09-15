@@ -40,7 +40,5 @@ The application is made up of the following components:
   * Type: LoadBalancer
     * Used to balance traffic to the Pac-Man Pods
 
-<img src="https://i1.wp.com/veducate.co.uk/wp-content/uploads/2021/08/Pac-Man-Kubernetes-Diagram.jpg?w=483&ssl=1" width=50% height=50%>
 
-
-
+![](img/arch.png)
