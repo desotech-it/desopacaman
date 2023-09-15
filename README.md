@@ -42,9 +42,5 @@ The application is made up of the following components:
 
 <img src="https://i1.wp.com/veducate.co.uk/wp-content/uploads/2021/08/Pac-Man-Kubernetes-Diagram.jpg?w=483&ssl=1" width=50% height=50%>
 
-## Source
 
-These are modified files from the below github repo for the node.js version, which contain the necessary changes to run in VMware Tanzu Kubernetes Grid (TKG) such as updated api values and pod security policies (psp) with associated service accounts and RBAC.
-
-> <https://github.com/font/k8s-example-apps/tree/master/pacman-nodejs-app>
 
