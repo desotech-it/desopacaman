@@ -1,6 +1,6 @@
 # DESO PACMAN - CodeMotion 2023 @Milano
 
-Pac-Man the classic arcade game - deployment files for VMware Tanzu Kubernetes and all other Kubernetes distributions.
+Pac-Man the classic arcade game - deployment files for any Kubernetes distributions.
 
 <img src="https://veducate.co.uk/wp-content/uploads/2021/09/Pac-Man-UI.jpg" width=45% height=45%>
 
@@ -10,25 +10,13 @@ ServiceType: LoadBalancer must be available for external connectivity to the Pac
 
 ## Deployment
 
-### Using Helm to install
-````
-kubectl create namespace pacman
-
-helm repo add veducate https://saintdle.github.io/helm-charts/
-helm install pacman veducate/pacman -n pacman
-
-# You can see the available values by running
-helm show values veducate/pacman
-````
-[Read this blog post](https://veducate.co.uk/how-to-create-helm-chart/) to learn how this Helm Chart was created.
-
 ### Using a Script for installation
 Clone repo and run ```chmod +X pacman-install.sh``` and then run file ```./pacman-install.sh```
 
 or the following steps:
 
     kubectl create namespace pacman
-    kubectl create -n pacman -f pacman-tanzu/
+    kubectl create -n pacman -f pacman/
 
 #### Uninstall using a Script
 Run file `./pacman-uninstall.sh`. This will delete all objects created by `./pacman-install.sh`
@@ -60,4 +48,3 @@ These are modified files from the below github repo for the node.js version, whi
 
 > <https://github.com/font/k8s-example-apps/tree/master/pacman-nodejs-app>
 
-Security changes to the deployment such as setting up mongodb auth were thanks to [Dav1x](https://github.com/dav1x/) you can find his [Pac-Man deployment for OpenShift here](https://github.com/dav1x/pacman-ocp).
