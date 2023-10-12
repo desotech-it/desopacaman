@@ -16,9 +16,21 @@ spec:
       labels:
         name: pacman
     spec:
+      securityContext:
+        seLinuxOptions:
+          rule: RunAsAny
+        supplementalGroups:
+          rule: RunAsAny
+        runAsUser:
+          rule: RunAsAny
+        fsGroup:
+          rule: RunAsAny
       containers:
       - image: r.deso.tech/pacman/pacman-nodejs-app
         name: pacman
+        securityContext:
+          privileged: true
+          allowPrivilegeEscalation: true
         ports:
         - containerPort: 8080
           name: http-server
